@@ -1,5 +1,6 @@
 import { ShoppingBag, Heart, UserRound } from "lucide-react";
 import logo from "../assets/logo2.png";
+import { Link } from "react-router-dom";
 
 function Header() {
   return (
@@ -13,25 +14,27 @@ function Header() {
 
         <div className="header-center">
           <nav className="header-nav">
-            <a href="#home" className="nav-link">
-              Home
-            </a>
-            <a href="#shop" className="nav-link">
-              Shop
-            </a>
-            <a href="#categories" className="nav-link">
-              Categories
-            </a>
-            <a href="#sale" className="nav-link">
-              Sale
-            </a>
+            <Link to="/" className="link">
+              <li className="nav-link">Home</li>
+            </Link>
+            <Link to="/shop" className="link">
+              <li className="nav-link">Shop</li>
+            </Link>
+            <Link to="/categories" className="link">
+              <li className="nav-link">Categories</li>
+            </Link>
+            <Link to="/sale" className="link">
+              <li className="nav-link">Sale</li>
+            </Link>
           </nav>
         </div>
 
         <div className="header-right">
           <div className="header-icons">
             <Heart className="icon favorite-icon" />
+
             <ShoppingBag className="icon cart-icon" />
+
             <UserRound className="icon user-icon" />
           </div>
         </div>
